@@ -88,8 +88,8 @@ export default function LoginPage() {
         <CardHeader className="space-y-1">
           <div className="flex justify-center mb-4">
             <Link href="/" className="flex items-center gap-2 text-lg font-bold">
-              <Package2 className="h-6 w-6" />
-              <span>Nexcoba Industries</span>
+              {/* <Package2 className="h-6 w-6" /> */}
+              <span>PT. PUTRAMAS MULIA JAYA</span>
             </Link>
           </div>
           <CardTitle className="text-2xl text-center">Login</CardTitle>
@@ -118,8 +118,11 @@ export default function LoginPage() {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
+                    <FormLabel>Password</FormLabel>
+                      <FormControl>
+                        <Input placeholder="••••••••" type="password" {...field} />
+                      </FormControl>
                     <div className="flex items-center justify-between">
-                      <FormLabel>Password</FormLabel>
                       <Link
                         href="#"
                         className="text-sm font-medium text-muted-foreground hover:underline"
@@ -133,9 +136,6 @@ export default function LoginPage() {
                         Lupa password?
                       </Link>
                     </div>
-                    <FormControl>
-                      <Input type="password" {...field} />
-                    </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
