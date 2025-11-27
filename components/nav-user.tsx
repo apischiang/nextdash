@@ -32,6 +32,7 @@ import {
 import { createClient } from "@/lib/supabase/client"
 import { useRouter } from "next/navigation"
 import { ModeToggle } from "./mode-toggle"
+import { toast } from "sonner"
 
 export function NavUser({
   user,
@@ -48,6 +49,9 @@ export function NavUser({
 
   const handleLogout = async () => {
     await supabase.auth.signOut()
+    toast.success("Logout berhasil", {
+      description: "Sampai jumpa kembali!",
+    })
     router.push("/login")
     router.refresh()
   }
