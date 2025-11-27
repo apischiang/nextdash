@@ -31,6 +31,7 @@ import {
 
 import { createClient } from "@/lib/supabase/client"
 import { useRouter } from "next/navigation"
+import { ModeToggle } from "./mode-toggle"
 
 export function NavUser({
   user,
@@ -93,6 +94,8 @@ export function NavUser({
                 </div>
               </div>
             </DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <ModeToggle />
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem>
